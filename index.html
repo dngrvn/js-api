@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Бесконечная лента с фотографиями</title>
+   <style>
+      body {
+         margin: 0;
+         padding: 0;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      img {
+         padding: 0;
+         margin: 0;
+      }
+
+      #photo-container {
+         display: flex;
+         flex-wrap: wrap;
+         padding-bottom: 50px;
+      }
+
+      .photo {
+         flex: 1 1 calc(33.33% - 20px);
+         margin: 10px;
+         border: 1px solid #ccc;
+         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+         overflow: hidden;
+      }
+
+      .photo img {
+         width: 100%;
+         height: auto;
+      }
+
+      p {
+         padding-left: 10px;
+         margin-bottom: 5px;
+      }
+
+      .likes-div {
+         display: flex;
+         justify-content: end;
+         align-items: center;
+         padding-right: 15px;
+         gap: 10px;
+         margin-bottom: 5px;
+      }
+
+      .likes-btn {
+         cursor: pointer;
+      }
+
+      .likes-btn svg g:hover {
+         fill: red;
+      }
+
+      .likes-counter,
+      .photo-id,
+      .totalLikes-counter {
+         padding: 0 5px;
+         border: 2px solid #b0b0b0;
+         border-radius: 2px;
+      }
+
+      .totalLikes-div {
+         display: flex;
+         justify-content: end;
+         align-items: center;
+         padding-right: 15px;
+         gap: 10px;
+      }
+   </style>
+   <script src="./script.js" defer></script>
+</head>
+
+<body>
+   <div id="photo-container">
+      <div class="photoUnit">
+         <div class="photo"><img src="" alt=""></div>
+         <p></p>
+         <div class="likes-div">
+            <button class="likes-btn">I like</button>
+            <span class="likes-counter">7</span>
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>
